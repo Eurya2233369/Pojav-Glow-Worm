@@ -27,7 +27,9 @@ include $(CLEAR_VARS)
 LOCAL_LDLIBS := -ldl -llog -landroid
 # -lGLESv2
 LOCAL_MODULE := pojavexec
-LOCAL_STRIP_MODULE :=false
+ifeq ($(NDK_DEBUG),1)
+  LOCAL_STRIP_MODE := none
+endif
 LOCAL_CFLAGS += -g -rdynamic
 # LOCAL_CFLAGS += -DDEBUG
 # -DGLES_TEST
