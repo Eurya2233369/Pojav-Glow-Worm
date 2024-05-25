@@ -1295,7 +1295,6 @@ public final class Tools {
             switch (MESA_LIBS) {
                 case "default":{
                     if(driverModle.contains("virgl")) continue;
-                    if(driverModle.contains("panfrost")) continue;
                     if(driverModle.contains("softpipe")) continue;
                     if(driverModle.contains("llvmpipe")) continue;
                 } break;
